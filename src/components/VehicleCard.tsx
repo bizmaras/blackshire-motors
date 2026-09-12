@@ -178,13 +178,17 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({
                   key={dotIdx}
                   type="button"
                   onClick={(e) => handleDotClick(e, dotIdx)}
-                  aria-label={`View photo ${dotIdx + 1}`}
-                  className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
-                    currentImageIndex === dotIdx
-                      ? 'w-4 bg-amber-400 shadow-sm shadow-amber-400/80'
-                      : 'w-1.5 bg-white/40 hover:bg-white/80'
-                  }`}
-                />
+                  aria-label={`View photo ${dotIdx + 1} of ${vehicle.name}`}
+                  className="p-2 -m-1.5 inline-flex items-center justify-center cursor-pointer"
+                >
+                  <span
+                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                      currentImageIndex === dotIdx
+                        ? 'w-4 bg-amber-400 shadow-sm shadow-amber-400/80'
+                        : 'w-1.5 bg-white/40 hover:bg-white/80'
+                    }`}
+                  />
+                </button>
               ))}
               {images.length > 8 && (
                 <span className="text-[9px] font-mono text-white/70 ml-0.5">+{images.length - 8}</span>
@@ -345,8 +349,8 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({
               onMakeOffer(vehicle);
             }}
             data-action="make-offer"
-            title={`Make an offer on ${vehicle.year} ${vehicle.name}`}
-            aria-label={`Make an offer on ${vehicle.year} ${vehicle.name}`}
+            title={`${t.inventory.makeOfferBtn} - ${vehicle.year} ${vehicle.name}`}
+            aria-label={`${t.inventory.makeOfferBtn} - ${vehicle.year} ${vehicle.name}`}
             className="w-full py-2 px-3 rounded-xl bg-amber-400/10 hover:bg-amber-400 hover:text-black text-amber-300 border border-amber-400/30 hover:border-amber-400 font-sans text-xs tracking-wider uppercase font-bold flex items-center justify-center gap-1.5 transition-all shadow-sm hover:shadow-amber-400/25 active:scale-[0.98] cursor-pointer"
           >
             <Tag className="w-3.5 h-3.5 shrink-0" />

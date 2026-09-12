@@ -138,10 +138,11 @@ export const BespokeStudio: React.FC<BespokeStudioProps> = ({
             
             {/* Step 1: Select Vehicle */}
             <div>
-              <label className="block text-xs font-sans uppercase tracking-wider text-neutral-400 mb-2 font-medium">
+              <label htmlFor="bespoke-select-vehicle" className="block text-xs font-sans uppercase tracking-wider text-neutral-400 mb-2 font-medium">
                 {lang === 'es' ? '1. Seleccionar Vehículo del Inventario' : '1. Select Vehicle from Inventory'}
               </label>
               <select
+                id="bespoke-select-vehicle"
                 value={activeVehicleId}
                 onChange={(e) => {
                   playHudClick();
@@ -160,18 +161,20 @@ export const BespokeStudio: React.FC<BespokeStudioProps> = ({
             {/* Step 2: Down Payment Slider */}
             <div>
               <div className="flex justify-between items-center text-xs font-sans mb-2">
-                <span className="text-neutral-400 uppercase font-medium">
+                <label htmlFor="bespoke-down-payment-range" className="text-neutral-400 uppercase font-medium">
                   {lang === 'es' ? '2. Pago Inicial en Efectivo' : '2. Cash Down Payment'}
-                </span>
+                </label>
                 <span className="text-amber-300 font-bold text-sm">${formatNumber(downPayment)}</span>
               </div>
               <input
+                id="bespoke-down-payment-range"
                 type="range"
                 min={0}
                 max={Math.min(15000, activeVehicle ? activeVehicle.price : 10000)}
                 step={250}
                 value={downPayment}
                 onChange={(e) => setDownPayment(Number(e.target.value))}
+                aria-label={lang === 'es' ? 'Pago inicial en efectivo' : 'Cash down payment'}
                 className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-400"
               />
               <div className="flex justify-between text-[10px] font-sans text-neutral-500 mt-1">

@@ -67,6 +67,7 @@ export const TaxAdvantageSection: React.FC<{ onOpenInventory: () => void }> = ({
                 step={1000}
                 value={vehicleValuation}
                 onChange={(e) => setVehicleValuation(Number(e.target.value))}
+                aria-label={t.tax.purchasePrice}
                 className="w-full h-2.5 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-400"
               />
               <div className="flex justify-between text-[11px] font-sans text-neutral-500 mt-2">

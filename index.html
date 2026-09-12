@@ -38,10 +38,17 @@
     <meta name="twitter:description" content="Quality pre-owned vehicles, 0% Delaware sales tax, CARFAX certified inventory & on-site service center in New Castle, DE." />
     <meta name="twitter:image" content="https://blackshire-motors.vercel.app/logo-gold.png" />
 
-    <!-- Google Typography -->
+    <!-- Google Typography (Asynchronous Non-Blocking Load) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    </noscript>
+
+    <!-- Priority Preload Hero First Slide Image for Instant Mobile LCP -->
+    <link rel="preload" as="image" href="https://imagescdn.dealercarsearch.com/Media/7194/24156930/639213915277816957.jpg" fetchpriority="high" />
 
     <!-- Schema.org AutoDealer & AutoRepair Structured Data -->
     <script type="application/ld+json">

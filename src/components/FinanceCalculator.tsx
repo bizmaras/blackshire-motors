@@ -111,6 +111,7 @@ export const FinanceCalculator: React.FC<FinanceCalculatorProps> = () => {
                   step={500}
                   value={vehiclePrice}
                   onChange={(e) => setVehiclePrice(Number(e.target.value))}
+                  aria-label={t.financing.vehiclePrice}
                   className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-400"
                 />
                 <div className="flex justify-between text-[10px] font-sans text-neutral-500 mt-1">
@@ -135,6 +136,7 @@ export const FinanceCalculator: React.FC<FinanceCalculatorProps> = () => {
                   step={250}
                   value={downPayment}
                   onChange={(e) => setDownPayment(Number(e.target.value))}
+                  aria-label={t.financing.downPayment}
                   className="w-full h-2 bg-neutral-800 rounded-lg appearance-none cursor-pointer accent-amber-400"
                 />
                 <div className="flex justify-between text-[10px] font-sans text-neutral-500 mt-1">

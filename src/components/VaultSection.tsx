@@ -261,6 +261,9 @@ export const VaultSection: React.FC<VaultSectionProps> = ({
             {/* Sort & View Mode Controls */}
             <div className="flex items-center gap-3 self-end sm:self-auto">
               <div className="relative">
+                <label htmlFor="vault-sort-select" className="sr-only">
+                  {t.inventory.sortBy}
+                </label>
                 <select
                   id="vault-sort-select"
                   aria-label={t.inventory.sortBy}

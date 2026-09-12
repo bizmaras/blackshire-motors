@@ -55,12 +55,15 @@ export const TaxAdvantageSection: React.FC<{ onOpenInventory: () => void }> = ({
 
             <div>
               <div className="flex justify-between items-center text-xs font-sans mb-2">
-                <span className="text-neutral-400 font-medium">{t.tax.selectedPrice}</span>
+                <label htmlFor="tax-vehicle-valuation" className="text-neutral-400 font-medium cursor-pointer">
+                  {t.tax.selectedPrice}
+                </label>
                 <span className="text-2xl font-bold font-sans text-amber-300">
                   ${formatNumber(vehicleValuation)}
                 </span>
               </div>
               <input
+                id="tax-vehicle-valuation"
                 type="range"
                 min={10000}
                 max={60000}

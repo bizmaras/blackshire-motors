@@ -84,7 +84,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070709] text-neutral-100 flex flex-col selection:bg-amber-400 selection:text-black font-sans relative w-full max-w-full overflow-x-hidden">
+    <div className="min-h-screen bg-[#070709] text-neutral-100 flex flex-col selection:bg-amber-400 selection:text-black font-sans relative w-full max-w-full overflow-x-clip">
       
       {/* Top Delaware 0% Tax Notice Bar */}
       <div className="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-black py-1.5 px-3 sm:px-4 text-center text-[11px] sm:text-xs font-sans font-bold tracking-wide flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 shadow-sm relative z-50">
@@ -127,7 +127,7 @@ function AppContent() {
       />
 
       {/* Main Content Sections */}
-      <main className="flex-1 w-full max-w-full overflow-x-hidden">
+      <main className="flex-1 w-full max-w-full overflow-x-clip">
         {/* Cinematic Hero */}
         <Hero
           onExploreVault={() => {

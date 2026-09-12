@@ -106,10 +106,11 @@ export const ValuationCalculator: React.FC<ValuationCalculatorProps> = () => {
               <form onSubmit={handleCalculate} className="space-y-4 font-sans">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[10px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
+                    <label htmlFor="val-make" className="block text-[10px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
                       {t.valuation.vehicleMake}
                     </label>
                     <select
+                      id="val-make"
                       value={make}
                       onChange={(e) => { playHudClick(); setMake(e.target.value); }}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-neutral-900 border border-white/10 text-xs font-sans text-white focus:outline-none focus:border-amber-400 cursor-pointer"
@@ -121,10 +122,11 @@ export const ValuationCalculator: React.FC<ValuationCalculatorProps> = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
+                    <label htmlFor="val-model" className="block text-[10px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
                       {t.valuation.modelTrim}
                     </label>
                     <input
+                      id="val-model"
                       type="text"
                       required
                       value={modelName}
@@ -137,10 +139,11 @@ export const ValuationCalculator: React.FC<ValuationCalculatorProps> = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-[10px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
+                    <label htmlFor="val-year" className="block text-[10px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
                       {t.valuation.year}
                     </label>
                     <input
+                      id="val-year"
                       type="number"
                       min={2000}
                       max={2026}
@@ -151,10 +154,11 @@ export const ValuationCalculator: React.FC<ValuationCalculatorProps> = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
+                    <label htmlFor="val-mileage" className="block text-[10px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
                       {t.valuation.currentOdometer}
                     </label>
                     <input
+                      id="val-mileage"
                       type="number"
                       min={0}
                       value={mileage}
@@ -164,10 +168,11 @@ export const ValuationCalculator: React.FC<ValuationCalculatorProps> = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
+                    <label htmlFor="val-condition" className="block text-[10px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
                       {t.valuation.condition}
                     </label>
                     <select
+                      id="val-condition"
                       value={condition}
                       onChange={(e) => { playHudClick(); setCondition(e.target.value as any); }}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-neutral-900 border border-white/10 text-xs font-sans text-white focus:outline-none focus:border-amber-400 cursor-pointer"

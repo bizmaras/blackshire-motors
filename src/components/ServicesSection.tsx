@@ -228,6 +228,7 @@ export const ServicesSection: React.FC = () => {
                       value={serviceName}
                       onChange={(e) => setServiceName(e.target.value)}
                       placeholder={t.services.yourName}
+                      aria-label={t.services.yourName}
                       className="px-3.5 py-2.5 rounded-xl bg-neutral-900 border border-white/15 text-xs text-white focus:outline-none focus:border-amber-400"
                     />
                     <input
@@ -236,6 +237,7 @@ export const ServicesSection: React.FC = () => {
                       value={servicePhone}
                       onChange={(e) => setServicePhone(e.target.value)}
                       placeholder={t.services.phoneNum}
+                      aria-label={t.services.phoneNum}
                       className="px-3.5 py-2.5 rounded-xl bg-neutral-900 border border-white/15 text-xs text-white focus:outline-none focus:border-amber-400"
                     />
                   </div>
@@ -247,11 +249,13 @@ export const ServicesSection: React.FC = () => {
                       value={serviceCar}
                       onChange={(e) => setServiceCar(e.target.value)}
                       placeholder={t.services.carYearMakeModel}
+                      aria-label={t.services.carYearMakeModel}
                       className="px-3.5 py-2.5 rounded-xl bg-neutral-900 border border-white/15 text-xs text-white focus:outline-none focus:border-amber-400"
                     />
                     <select
                       value={serviceNeed}
                       onChange={(e) => setServiceNeed(e.target.value)}
+                      aria-label={lang === 'es' ? 'Tipo de servicio requerido' : 'Required service type'}
                       className="px-3.5 py-2.5 rounded-xl bg-neutral-900 border border-white/15 text-xs text-white focus:outline-none focus:border-amber-400 cursor-pointer"
                     >
                       <option value="Oil & Filter Service">{lang === 'es' ? 'Cambio de Aceite y Filtro' : 'Oil & Filter Service'}</option>

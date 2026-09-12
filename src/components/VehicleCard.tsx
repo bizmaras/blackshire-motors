@@ -172,23 +172,16 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({
             </button>
 
             {/* Micro Dot Navigation Indicators */}
-            <div className="absolute bottom-9 left-0 right-0 z-20 flex items-center justify-center gap-1 pointer-events-auto px-4">
+            <div className="absolute bottom-9 left-0 right-0 z-20 flex items-center justify-center gap-1.5 pointer-events-none px-4" aria-hidden="true">
               {images.slice(0, 8).map((_, dotIdx) => (
-                <button
+                <span
                   key={dotIdx}
-                  type="button"
-                  onClick={(e) => handleDotClick(e, dotIdx)}
-                  aria-label={`View photo ${dotIdx + 1} of ${vehicle.name}`}
-                  className="p-2 -m-1.5 inline-flex items-center justify-center cursor-pointer"
-                >
-                  <span
-                    className={`h-1.5 rounded-full transition-all duration-300 ${
-                      currentImageIndex === dotIdx
-                        ? 'w-4 bg-amber-400 shadow-sm shadow-amber-400/80'
-                        : 'w-1.5 bg-white/40 hover:bg-white/80'
-                    }`}
-                  />
-                </button>
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    currentImageIndex === dotIdx
+                      ? 'w-4 bg-amber-400 shadow-sm shadow-amber-400/80'
+                      : 'w-1.5 bg-white/40'
+                  }`}
+                />
               ))}
               {images.length > 8 && (
                 <span className="text-[9px] font-mono text-white/70 ml-0.5">+{images.length - 8}</span>

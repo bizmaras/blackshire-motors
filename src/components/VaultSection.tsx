@@ -262,6 +262,8 @@ export const VaultSection: React.FC<VaultSectionProps> = ({
             <div className="flex items-center gap-3 self-end sm:self-auto">
               <div className="relative">
                 <select
+                  id="vault-sort-select"
+                  aria-label={t.inventory.sortBy}
                   value={sortBy}
                   onChange={(e) => {
                     playHudClick();

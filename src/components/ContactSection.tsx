@@ -190,10 +190,11 @@ export const ContactSection: React.FC = () => {
                 />
 
                 <div>
-                  <label className="block text-[11px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
+                  <label htmlFor="contact-fullname" className="block text-[11px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
                     {t.contact.fullName}
                   </label>
                   <input
+                    id="contact-fullname"
                     type="text"
                     required
                     value={formData.name}
@@ -205,10 +206,11 @@ export const ContactSection: React.FC = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[11px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
+                    <label htmlFor="contact-phone" className="block text-[11px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
                       {t.contact.phoneNumber}
                     </label>
                     <input
+                      id="contact-phone"
                       type="tel"
                       required
                       value={formData.phone}
@@ -219,10 +221,11 @@ export const ContactSection: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
+                    <label htmlFor="contact-email" className="block text-[11px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
                       {t.contact.emailAddress}
                     </label>
                     <input
+                      id="contact-email"
                       type="email"
                       required
                       value={formData.email}
@@ -234,10 +237,11 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
+                  <label htmlFor="contact-subject" className="block text-[11px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
                     {t.contact.inquiryCategory}
                   </label>
                   <select
+                    id="contact-subject"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl bg-neutral-900 border border-white/10 text-xs font-sans text-white focus:outline-none focus:border-amber-400 cursor-pointer"
@@ -251,10 +255,11 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
+                  <label htmlFor="contact-notes" className="block text-[11px] font-sans text-neutral-400 uppercase tracking-wider mb-1 font-medium">
                     {t.contact.additionalNotes}
                   </label>
                   <textarea
+                    id="contact-notes"
                     rows={3}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}

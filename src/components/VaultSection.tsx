@@ -182,7 +182,7 @@ export const VaultSection: React.FC<VaultSectionProps> = ({
   };
 
   return (
-    <section id="inventory" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-20 sm:py-24 relative bg-[#08080a] border-t border-white/5">
+    <section id="inventory" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-20 sm:py-24 relative bg-[#08080a] border-t border-white/5 overflow-hidden">
       {/* Background glow accents */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-amber-500/5 blur-[140px] pointer-events-none" />
 

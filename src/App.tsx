@@ -84,11 +84,11 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[#070709] text-neutral-100 flex flex-col selection:bg-amber-400 selection:text-black font-sans relative">
+    <div className="min-h-screen bg-[#070709] text-neutral-100 flex flex-col selection:bg-amber-400 selection:text-black font-sans relative w-full max-w-full overflow-x-hidden">
       
       {/* Top Delaware 0% Tax Notice Bar */}
-      <div className="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-black py-1.5 px-4 text-center text-xs font-sans font-bold tracking-wide flex items-center justify-center gap-2 shadow-sm relative z-50">
-        <Percent className="w-3.5 h-3.5 fill-black stroke-amber-500" />
+      <div className="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-black py-1.5 px-3 sm:px-4 text-center text-[11px] sm:text-xs font-sans font-bold tracking-wide flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 shadow-sm relative z-50">
+        <Percent className="w-3.5 h-3.5 fill-black stroke-amber-500 shrink-0" />
         <span>
           {lang === 'es'
             ? '¡REFUGIO FISCAL DE DELAWARE: 0.0% DE IMPUESTO SOBRE VENTAS EN TODOS LOS VEHÍCULOS! AHORRA HASTA $3,500 FRENTE A PA, NJ Y MD.'
@@ -111,7 +111,7 @@ function AppContent() {
               window.history.pushState(null, '', '#tax-advantage');
             }
           }}
-          className="underline ml-1 hover:text-white transition-colors cursor-pointer"
+          className="underline ml-1 hover:text-white transition-colors cursor-pointer whitespace-nowrap"
         >
           {lang === 'es' ? 'Ver Detalles →' : 'Learn More →'}
         </a>
@@ -127,7 +127,7 @@ function AppContent() {
       />
 
       {/* Main Content Sections */}
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-hidden">
         {/* Cinematic Hero */}
         <Hero
           onExploreVault={() => {

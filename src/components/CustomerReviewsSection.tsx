@@ -13,7 +13,7 @@ export const CustomerReviewsSection: React.FC = () => {
   });
 
   return (
-    <section id="reviews" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-20 bg-[#08080c] border-t border-white/5 relative">
+    <section id="reviews" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-20 bg-[#08080c] border-t border-white/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header & Rating Summary */}

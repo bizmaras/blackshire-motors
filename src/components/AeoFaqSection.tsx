@@ -39,7 +39,7 @@ export const AeoFaqSection: React.FC = () => {
   const faqs = lang === 'es' ? SPANISH_FAQS : DEALERSHIP_FAQS;
 
   return (
-    <section id="faq" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-20 bg-[#07070b] border-t border-white/5 relative">
+    <section id="faq" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-20 bg-[#07070b] border-t border-white/5 relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 relative z-10">
         
         {/* Section Header */}

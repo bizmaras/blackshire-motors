@@ -427,17 +427,17 @@ export const Hero: React.FC<HeroProps> = ({
       </div>
 
       {/* Slider Controls & Progress Bar */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full flex items-center justify-between pt-4 border-t border-white/10">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 w-full flex items-center justify-between pt-4 border-t border-white/10 gap-2">
         
         {/* Slide Indicators with Progress Fill */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
           {slides.map((slide, idx) => (
             <button
               key={slide.id}
               onClick={() => handleSelectSlide(idx)}
               className="group flex flex-col gap-1 cursor-pointer text-left"
             >
-              <div className="w-16 sm:w-28 h-1.5 bg-white/10 rounded-full overflow-hidden">
+              <div className="w-8 sm:w-28 h-1.5 bg-white/10 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-amber-400 transition-all duration-75"
                   style={{

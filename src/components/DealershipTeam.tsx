@@ -22,7 +22,7 @@ export const DealershipTeam: React.FC = () => {
   };
 
   return (
-    <section id="team" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-20 bg-[#0a0a0e] border-t border-white/5 relative">
+    <section id="team" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-20 bg-[#0a0a0e] border-t border-white/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Section Header */}

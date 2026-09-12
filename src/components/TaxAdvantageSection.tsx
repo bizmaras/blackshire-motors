@@ -20,7 +20,7 @@ export const TaxAdvantageSection: React.FC<{ onOpenInventory: () => void }> = ({
   const averageNeighborTax = Math.round((paTax + njTax + mdTax) / 3);
 
   return (
-    <section id="tax-advantage" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-20 bg-[#09090e] border-t border-white/5 relative">
+    <section id="tax-advantage" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-20 bg-[#09090e] border-t border-white/5 relative overflow-hidden">
       <div className="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-amber-500/5 blur-[120px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">

@@ -113,7 +113,7 @@ export const ServicesSection: React.FC = () => {
   };
 
   return (
-    <section id="services" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-24 relative bg-[#08080a] border-t border-white/5">
+    <section id="services" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-24 relative bg-[#08080a] border-t border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Section Header */}

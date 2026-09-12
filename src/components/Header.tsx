@@ -171,7 +171,7 @@ export const Header: React.FC<HeaderProps> = ({
           : 'bg-gradient-to-b from-[#08080c] via-[#08080c]/95 to-[#0b0b12]/90 backdrop-blur-xl border-b border-white/10 py-5 sm:py-6 md:py-7 lg:py-8 shadow-xl shadow-black/60'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between min-h-[72px] sm:min-h-[84px] md:min-h-[100px]">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 flex items-center justify-between min-h-[64px] sm:min-h-[84px] md:min-h-[100px] w-full">
         {/* Brand Logo with Official Stallion Crest - Expanded & Calibrated for Dark Header */}
         <a
           href="#"
@@ -198,7 +198,7 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
 
         {/* Action Controls */}
-        <div className="flex items-center gap-2.5 sm:gap-3">
+        <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
           {/* Vehicle Comparison Button (active indicator) */}
           {comparedCount > 0 && (
             <button
@@ -296,7 +296,7 @@ export const Header: React.FC<HeaderProps> = ({
             </button>
 
             {optionsMenuOpen && (
-              <div className="absolute right-0 mt-2 w-72 rounded-2xl bg-[#0e0e14]/98 border border-white/15 p-3.5 shadow-2xl backdrop-blur-2xl z-50 animate-in fade-in zoom-in-95 duration-150 space-y-3">
+              <div className="absolute right-0 mt-2 w-72 max-w-[calc(100vw-2rem)] rounded-2xl bg-[#0e0e14]/98 border border-white/15 p-3.5 shadow-2xl backdrop-blur-2xl z-50 animate-in fade-in zoom-in-95 duration-150 space-y-3">
                 <div className="flex items-center justify-between pb-2 border-b border-white/10 text-[10px] font-sans uppercase tracking-widest text-neutral-400 font-semibold">
                   <span>{t.header.showroomPreferences}</span>
                   <span className="text-amber-400">Settings</span>

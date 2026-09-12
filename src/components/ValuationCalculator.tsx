@@ -65,7 +65,7 @@ export const ValuationCalculator: React.FC<ValuationCalculatorProps> = () => {
   };
 
   return (
-    <section id="trade" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-24 relative bg-[#070709] border-t border-white/5">
+    <section id="trade" className="scroll-mt-28 sm:scroll-mt-32 lg:scroll-mt-36 py-24 relative bg-[#070709] border-t border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           

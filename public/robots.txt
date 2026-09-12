@@ -1,0 +1,6 @@
+# robots.txt for Blackshire Motors
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://blackshire-motors.vercel.app/sitemap.xml

@@ -135,6 +135,8 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({
           key={currentImage}
           src={currentImage}
           alt={`${vehicle.year} ${vehicle.make} ${vehicle.model} ${vehicle.trim} - Photo ${currentImageIndex + 1} of ${images.length} at Blackshire Motors New Castle DE`}
+          loading="lazy"
+          decoding="async"
           referrerPolicy="no-referrer"
           onError={(e) => {
             const target = e.currentTarget as HTMLImageElement;

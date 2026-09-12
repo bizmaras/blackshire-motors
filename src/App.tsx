@@ -17,12 +17,12 @@ import { AeoFaqSection } from './components/AeoFaqSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 
-// Drawers & Modals
-import { VehicleModal } from './components/VehicleModal';
-import { BespokeStudio } from './components/BespokeStudio';
-import { CompareDrawer } from './components/CompareDrawer';
-import { AuditDrawer } from './components/AuditDrawer';
-import { MakeOfferModal } from './components/MakeOfferModal';
+// Drawers & Modals (Lazy Loaded for Fast Initial Page Load)
+const VehicleModal = React.lazy(() => import('./components/VehicleModal').then(m => ({ default: m.VehicleModal })));
+const BespokeStudio = React.lazy(() => import('./components/BespokeStudio').then(m => ({ default: m.BespokeStudio })));
+const CompareDrawer = React.lazy(() => import('./components/CompareDrawer').then(m => ({ default: m.CompareDrawer })));
+const AuditDrawer = React.lazy(() => import('./components/AuditDrawer').then(m => ({ default: m.AuditDrawer })));
+const MakeOfferModal = React.lazy(() => import('./components/MakeOfferModal').then(m => ({ default: m.MakeOfferModal })));
 
 import { Phone, MessageSquare, Percent, ShieldCheck } from 'lucide-react';
 import { playHudClick, playTactileChime } from './utils/audio';
@@ -215,58 +215,71 @@ function AppContent() {
         </a>
       </div>
 
-      {/* Vehicle Dossier Details Modal */}
-      <VehicleModal
-        vehicle={selectedVehicle}
-        currency={currency}
-        onClose={() => setSelectedVehicle(null)}
-        onOpenBespoke={(v) => {
-          setSelectedVehicle(v);
-          setIsBespokeOpen(true);
-        }}
-        onBookTestDrive={(v) => {
-          setSelectedVehicle(v);
-        }}
-        onMakeOffer={(v) => {
-          setOfferVehicle(v);
-        }}
-      />
+      {/* Modals & Drawers with Suspense */}
+      <React.Suspense fallback={null}>
+        {/* Vehicle Dossier Details Modal */}
+        {selectedVehicle && (
+          <VehicleModal
+            vehicle={selectedVehicle}
+            currency={currency}
+            onClose={() => setSelectedVehicle(null)}
+            onOpenBespoke={(v) => {
+              setSelectedVehicle(v);
+              setIsBespokeOpen(true);
+            }}
+            onBookTestDrive={(v) => {
+              setSelectedVehicle(v);
+            }}
+            onMakeOffer={(v) => {
+              setOfferVehicle(v);
+            }}
+          />
+        )}
 
-      {/* Make an Offer Modal */}
-      <MakeOfferModal
-        vehicle={offerVehicle}
-        currency={currency}
-        onClose={() => setOfferVehicle(null)}
-      />
+        {/* Make an Offer Modal */}
+        {offerVehicle && (
+          <MakeOfferModal
+            vehicle={offerVehicle}
+            currency={currency}
+            onClose={() => setOfferVehicle(null)}
+          />
+        )}
 
-      {/* Bespoke Financing & Loan Application Studio */}
-      <BespokeStudio
-        isOpen={isBespokeOpen}
-        onClose={() => setIsBespokeOpen(false)}
-        vehicles={VEHICLES_DATA}
-        selectedVehicle={selectedVehicle}
-        currency={currency}
-      />
+        {/* Bespoke Financing & Loan Application Studio */}
+        {isBespokeOpen && (
+          <BespokeStudio
+            isOpen={isBespokeOpen}
+            onClose={() => setIsBespokeOpen(false)}
+            vehicles={VEHICLES_DATA}
+            selectedVehicle={selectedVehicle}
+            currency={currency}
+          />
+        )}
 
-      {/* Side-by-Side Comparison Drawer */}
-      <CompareDrawer
-        isOpen={isCompareOpen}
-        onClose={() => setIsCompareOpen(false)}
-        vehicles={comparedVehicles}
-        onRemoveVehicle={handleRemoveCompare}
-        onClearAll={handleClearCompare}
-        onSelectVehicle={(v) => {
-          setIsCompareOpen(false);
-          setSelectedVehicle(v);
-        }}
-        currency={currency}
-      />
+        {/* Side-by-Side Comparison Drawer */}
+        {isCompareOpen && (
+          <CompareDrawer
+            isOpen={isCompareOpen}
+            onClose={() => setIsCompareOpen(false)}
+            vehicles={comparedVehicles}
+            onRemoveVehicle={handleRemoveCompare}
+            onClearAll={handleClearCompare}
+            onSelectVehicle={(v) => {
+              setIsCompareOpen(false);
+              setSelectedVehicle(v);
+            }}
+            currency={currency}
+          />
+        )}
 
-      {/* 150-Point Lot Certification Audit Details */}
-      <AuditDrawer
-        isOpen={isAuditOpen}
-        onClose={() => setIsAuditOpen(false)}
-      />
+        {/* 150-Point Lot Certification Audit Details */}
+        {isAuditOpen && (
+          <AuditDrawer
+            isOpen={isAuditOpen}
+            onClose={() => setIsAuditOpen(false)}
+          />
+        )}
+      </React.Suspense>
     </div>
   );
 }

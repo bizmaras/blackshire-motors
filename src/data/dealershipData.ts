@@ -27,6 +27,12 @@ export const DEALERSHIP_INFO = {
     reviewsCount: 142,
   },
   salesTaxBenefit: '0% Delaware State Sales Tax',
+  social: {
+    facebook: 'https://www.facebook.com/Blackshire-Motors-376040206206727',
+    twitter: 'https://twitter.com/BlackshireMotor',
+    youtube: 'http://www.youtube.com/user/BlackshireMotorsDE',
+    googleBusiness: 'https://www.google.com/local/dealership/6806565646832008827/',
+  },
 };
 
 export const STAFF_MEMBERS: StaffMember[] = [

@@ -1,7 +1,7 @@
 import React from 'react';
 import { DEALERSHIP_INFO } from '../data/dealershipData';
 import { BlackshireLogo } from './BlackshireLogo';
-import { MapPin, Phone, Mail, ArrowUp, ShieldCheck } from 'lucide-react';
+import { MapPin, Phone, Mail, ArrowUp, ShieldCheck, Facebook, Twitter, Youtube } from 'lucide-react';
 import { playHudClick } from '../utils/audio';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -20,7 +20,7 @@ export const Footer: React.FC<{ onOpenAudit: () => void }> = ({ onOpenAudit }) =
         {/* Main 4-Column Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           
-          {/* Col 1: Brand & Delaware Statement */}
+          {/* Col 1: Brand, Delaware Statement & Social */}
           <div className="lg:col-span-2 space-y-4">
             <BlackshireLogo size="lg" variant="horizontal" color="gold" />
             <p className="text-xs text-neutral-400 font-light leading-relaxed max-w-sm mt-3">
@@ -29,7 +29,7 @@ export const Footer: React.FC<{ onOpenAudit: () => void }> = ({ onOpenAudit }) =
                 : 'Premier pre-owned luxury car dealership and full-service mechanical repair facility located at 154 S Dupont Hwy, New Castle, DE. Delaware 0% sales tax haven with certified 150-point inspection.'}
             </p>
 
-            <div className="pt-2 flex items-center gap-3">
+            <div className="pt-2 flex flex-wrap items-center gap-3">
               <button
                 onClick={() => { playHudClick(); onOpenAudit(); }}
                 className="px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-amber-400 text-xs flex items-center gap-1.5 transition-colors cursor-pointer"
@@ -37,6 +37,37 @@ export const Footer: React.FC<{ onOpenAudit: () => void }> = ({ onOpenAudit }) =
                 <ShieldCheck className="w-4 h-4" />
                 <span>{lang === 'es' ? 'Certificación 150 Puntos' : '150-Point Certified Standard'}</span>
               </button>
+
+              {/* Social Channels */}
+              <div className="flex items-center gap-2">
+                <a
+                  href={DEALERSHIP_INFO.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="p-2 rounded-xl bg-white/5 hover:bg-amber-400/20 hover:text-amber-300 text-neutral-400 border border-white/10 transition-colors"
+                >
+                  <Facebook className="w-4 h-4" />
+                </a>
+                <a
+                  href={DEALERSHIP_INFO.social.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter / X"
+                  className="p-2 rounded-xl bg-white/5 hover:bg-amber-400/20 hover:text-amber-300 text-neutral-400 border border-white/10 transition-colors"
+                >
+                  <Twitter className="w-4 h-4" />
+                </a>
+                <a
+                  href={DEALERSHIP_INFO.social.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube"
+                  className="p-2 rounded-xl bg-white/5 hover:bg-amber-400/20 hover:text-amber-300 text-neutral-400 border border-white/10 transition-colors"
+                >
+                  <Youtube className="w-4 h-4" />
+                </a>
+              </div>
             </div>
           </div>
 

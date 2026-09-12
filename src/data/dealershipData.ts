@@ -1,0 +1,183 @@
+import { CustomerReview, StaffMember, DealershipFaq } from '../types';
+
+export const DEALERSHIP_INFO = {
+  name: 'Blackshire Motors',
+  street: '154 S Dupont Hwy',
+  city: 'New Castle',
+  state: 'DE',
+  zip: '19720',
+  fullAddress: '154 S Dupont Hwy, New Castle, DE 19720',
+  phones: {
+    primary: '(302) 276-2427',
+    telPrimary: '3022762427',
+    secondary: '(302) 324-1784',
+    telSecondary: '3023241784',
+  },
+  email: 'blackshiremotors@gmail.com',
+  hours: {
+    weekday: 'Monday – Saturday: 10:00 AM – 7:00 PM',
+    sunday: 'Sunday: Closed (Private Consultations by Appointment)',
+  },
+  coordinates: {
+    lat: 39.6706,
+    lng: -75.5869,
+  },
+  rating: {
+    score: 4.8,
+    reviewsCount: 142,
+  },
+  salesTaxBenefit: '0% Delaware State Sales Tax',
+};
+
+export const STAFF_MEMBERS: StaffMember[] = [
+  {
+    name: 'Fazal',
+    role: 'Dealership & Finance Manager',
+    experience: '15+ Years Auto Experience',
+    badge: 'Dealership & Finance Leadership',
+    bio: 'Fazal has extensive experience in the automobile industry having worked in a Nissan dealership, a Mercedes dealership, and a wholesale auto exporting business prior to joining Blackshire. His philosophy is that from the moment you step on our lot until the time you drive away in your next car, your buying experience with Blackshire Motors is our number one priority. He encourages you to use the expertise and resources of our sales and finance staff to help you find the right car at the right price.',
+    directPhone: '(302) 276-2427',
+    email: 'blackshiremotors@gmail.com',
+    photo: '/team/fazal.jpg',
+  },
+  {
+    name: 'Sajid',
+    role: 'Lot Operations Manager',
+    experience: '12+ Years Auto Experience',
+    badge: 'Lot Management & Inspection Prep',
+    bio: 'While Sajid is organizing, running, and maintaining our lot at 154 S Dupont Hwy, he is always there to help if you need anything. He oversees vehicle turnaround, lot staging, and ensures every car, SUV, and truck is prepped, clean, and ready for your test drive.',
+    directPhone: '(302) 276-2427',
+    email: 'blackshiremotors@gmail.com',
+    photo: '/team/sajid.jpg',
+  },
+  {
+    name: 'Cristal Gomez',
+    role: 'Sales Specialist',
+    experience: 'Bilingual Sales Specialist',
+    badge: 'Se Habla Español',
+    bio: 'Dedicated bilingual automotive sales specialist assisting both English and Spanish-speaking customers. Cristal guides buyers through vehicle selection, trade-in valuations, transparent pricing, and 0% Delaware sales tax savings with a zero-pressure approach.',
+    directPhone: '(302) 276-2427',
+    email: 'blackshiremotorscristal@gmail.com',
+    photo: 'https://imagescdn.dealercarsearch.com/DealerImages/7194/53493.jpg',
+  },
+  {
+    name: 'Hira Farukh',
+    role: 'Sales Specialist',
+    experience: 'Client Sales Advisory',
+    badge: 'Pre-Owned Inventory Specialist',
+    bio: 'Focused on providing attentive, friendly customer service. Hira assists drivers in exploring our verified inventory, reviewing CARFAX vehicle history reports, comparing trim options, and scheduling hassle-free test drives.',
+    directPhone: '(302) 276-2427',
+    email: 'blackshiremotorshira@gmail.com',
+    photo: 'https://imagescdn.dealercarsearch.com/DealerImages/7194/62583.jpg',
+  },
+  {
+    name: 'Yassir',
+    role: 'Sales Specialist',
+    experience: 'Client Sales & Trade-In',
+    badge: 'Trade-In & Vehicle Sales',
+    bio: 'Knowledgeable automotive sales consultant dedicated to honest communication and high customer satisfaction. Yassir assists buyers with test drive walk-arounds and competitive trade appraisals.',
+    directPhone: '(302) 276-2427',
+    email: 'blackshiremotorsyassir@gmail.com',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+  },
+  {
+    name: 'Junaid Awan',
+    role: 'Sales Specialist',
+    experience: 'Vehicle Sales Consultant',
+    badge: 'Customer Consultation',
+    bio: 'Committed to helping Delaware and tri-state customers find reliable transportation suited to their budget and lifestyle, with clean titles and 150-point safety inspections.',
+    directPhone: '(302) 276-2427',
+    email: 'blackshiremotorsjunaid@gmail.com',
+    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
+  },
+];
+
+export const CUSTOMER_REVIEWS: CustomerReview[] = [
+  {
+    id: 'rev-1',
+    author: 'Marcus Vance',
+    location: 'Wilmington, DE',
+    rating: 5,
+    date: 'February 2026',
+    source: 'Google',
+    comment: 'Purchased my 2016 BMW 428i Gran Coupe from Blackshire Motors. The car was spotless, passed Delaware DMV inspection effortlessly, and the 0% sales tax saved me over a thousand dollars compared to buying in Philly.',
+    vehiclePurchased: '2016 BMW 428i xDrive',
+  },
+  {
+    id: 'rev-2',
+    author: 'David Kowalski',
+    location: 'Philadelphia, PA',
+    rating: 5,
+    date: 'January 2026',
+    source: 'Google',
+    comment: 'Drove down from PA to check out a RAM 1500. Fazal, Sajid and the team were completely transparent with no hidden dealer fees. Out-the-door price was exact, and the truck runs like new.',
+    vehiclePurchased: '2020 RAM 1500 Classic 4x4',
+  },
+  {
+    id: 'rev-3',
+    author: 'Elena Rostova',
+    location: 'Newark, DE',
+    rating: 5,
+    date: 'March 2026',
+    source: 'CarGurus',
+    comment: 'I brought in my older Honda for trade-in and got higher value than CarMax offered. Their on-site service center also took care of fresh brakes before delivery. Honest dealership!',
+    vehiclePurchased: '2018 Infiniti Q50 3.0t',
+  },
+  {
+    id: 'rev-4',
+    author: 'James T. Hollister',
+    location: 'Cherry Hill, NJ',
+    rating: 5,
+    date: 'December 2025',
+    source: 'DealerRater',
+    comment: 'Very professional outfit. They had full CARFAX records printed out and ready before I even arrived for my test drive. Financing process was seamless.',
+    vehiclePurchased: '2017 Porsche Macan S',
+  },
+  {
+    id: 'rev-5',
+    author: 'Robert Sterling',
+    location: 'Bear, DE',
+    rating: 5,
+    date: 'February 2026',
+    source: 'Google',
+    comment: 'Second car my family has bought from 154 S Dupont Hwy. The lifetime service discount for buyers makes maintenance so affordable compared to franchise dealers.',
+    vehiclePurchased: '2019 Chevrolet Silverado 1500',
+  },
+  {
+    id: 'rev-6',
+    author: 'Maria Fernandez',
+    location: 'New Castle, DE',
+    rating: 5,
+    date: 'January 2026',
+    source: 'Google',
+    comment: 'Excelente atención de todo el equipo en Blackshire Motors. Me ayudaron a conseguir financiamiento con una tasa muy competitiva para mi camioneta familiar.',
+    vehiclePurchased: '2018 Cadillac XT5 Luxury',
+  },
+];
+
+export const DEALERSHIP_FAQS: DealershipFaq[] = [
+  {
+    question: 'Where is Blackshire Motors located and what are your showroom hours?',
+    answer: 'Blackshire Motors is located at 154 S Dupont Hwy, New Castle, DE 19720 (on Route 13, just 10 minutes south of Wilmington and 25 minutes from Philadelphia International Airport). We are open Monday through Saturday from 10:00 AM to 7:00 PM. Closed on Sundays for private appointments.',
+  },
+  {
+    question: 'Does Delaware have sales tax on used cars purchased at Blackshire Motors?',
+    answer: 'Delaware has 0.0% state sales tax! When you purchase your vehicle at Blackshire Motors in Delaware, you enjoy Delaware’s tax-free status, saving thousands of dollars compared to neighboring Pennsylvania (6%), New Jersey (6.625%), or Maryland (6%).',
+  },
+  {
+    question: 'What auto financing and credit options do you offer?',
+    answer: 'We provide comprehensive automotive financing for all credit spectrums: Prime (rates starting at 5.9% APR for tier-1 credit), first-time buyers, second-chance credit rebuild programs, and partnerships with local Delaware credit unions and national lenders. Trade-in equity can be applied directly to reduce your down payment.',
+  },
+  {
+    question: 'Do you provide on-site repair, state inspections, and ongoing maintenance?',
+    answer: 'Yes! Blackshire Motors features a certified full-service mechanical atelier at 154 S Dupont Hwy. All customers who buy a vehicle from us receive permanent discounted labor rates and priority scheduling on future maintenance, oil changes, brake pads, and computer diagnostics.',
+  },
+  {
+    question: 'Are all vehicles inspected and CARFAX certified before sale?',
+    answer: 'Every vehicle in our showroom inventory undergoes a stringent 150-point mechanical and safety inspection before being offered for sale. We provide transparent CARFAX vehicle history reports, authenticated mileage, clean titles, and a CARFAX Buyback Guarantee.',
+  },
+  {
+    question: 'Can I sell my car or trade it in even if I don’t buy a car from you?',
+    answer: 'Absolutely. We actively purchase clean pre-owned vehicles, luxury sedans, and trucks. You can use our on-site trade appraisal tool to get an instant estimate, or bring your title and vehicle to 154 S Dupont Hwy for an on-the-spot cash offer.',
+  },
+];

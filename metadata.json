@@ -1,0 +1,6 @@
+{
+  "name": "Blackshire Motors",
+  "description": "Used cars, SUVs, and trucks for sale at Blackshire Motors in New Castle, DE. Clean titles, 150-point inspection, and 0% Delaware sales tax savings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

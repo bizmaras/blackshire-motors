@@ -4,6 +4,11 @@ This repository utilizes a multi-agent specialized architecture for development,
 
 ## Active Project Agents
 
+### 0. Chief System Architect & Tech Lead (`system_architect`)
+- **Scope**: Top-level technical review authority, architectural integrity, multi-agent coordination, veto/approval of subagent PRs and changes.
+- **Standards**: High code quality, modular architecture, zero TypeScript errors (`tsc --noEmit`), optimal bundle size, clean separation of concerns.
+- **Key Files**: Architecture-wide (`vite.config.ts`, `tsconfig.json`, `package.json`, `src/App.tsx`, `vercel.json`).
+
 ### 1. Frontend & UI/UX Specialist (`frontend_engineer`)
 - **Scope**: React (TypeScript), Tailwind CSS, Framer Motion, responsive design (Mobile 375px & Desktop).
 - **Standards**: Zero horizontal overflow (`overflow-x-clip`), fluid typography, accessible button targets, dark luxury theme consistency (#070709, gold/amber accents).

@@ -4,6 +4,11 @@ This repository utilizes a multi-agent specialized architecture for development,
 
 ## Active Project Agents
 
+### 👑 Autonomous Super CEO Agent (`super_ceo_agent`)
+- **Scope**: Supreme executive oversight of all 3 websites/apps, continuous system health monitoring, dynamic subagent generation (`define_subagent`), and real-time executive report delivery to Obsidian (`CEO_Executive_Reports.md`).
+- **Standards**: Uncompromised business continuity, 3/3 Agentic Browsing, zero security breaches, full automation.
+- **Key Files**: Organization-wide (`AGENTS.md`, `Obsidian Vault/CEO_Executive_Reports.md`, system configs).
+
 ### 0. Chief System Architect & Tech Lead (`system_architect`)
 - **Scope**: Top-level technical review authority, architectural integrity, multi-agent coordination, veto/approval of subagent PRs and changes.
 - **Standards**: High code quality, modular architecture, zero TypeScript errors (`tsc --noEmit`), optimal bundle size, clean separation of concerns.

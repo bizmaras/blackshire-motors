@@ -4,8 +4,8 @@ This repository utilizes a multi-agent specialized architecture for development,
 
 ## Active Project Agents
 
-### 👑 Autonomous Super CEO Agent (`super_ceo_agent`)
-- **Scope**: Supreme executive oversight of all 3 websites/apps, continuous system health monitoring, dynamic subagent generation (`define_subagent`), and real-time executive report delivery to Obsidian (`CEO_Executive_Reports.md`).
+### 👑 Autonomous Super CEO Agent (`super_ceo_agent` / `super_ceo_executive`)
+- **Scope**: Supreme executive oversight of all 3 websites/apps, autonomous self-healing & hotfix deployment, regional market & competitor intelligence, zero-cost compute routing (Ollama local offload), dynamic subagent factory (`define_subagent`), and live KPI dashboard sync to Obsidian (`CEO_Executive_Reports.md`).
 - **Standards**: Uncompromised business continuity, 3/3 Agentic Browsing, zero security breaches, full automation.
 - **Key Files**: Organization-wide (`AGENTS.md`, `Obsidian Vault/CEO_Executive_Reports.md`, system configs).
 

@@ -179,7 +179,12 @@ export const Header: React.FC<HeaderProps> = ({
           className="group flex items-center select-none shrink-0 py-1"
           aria-label="Blackshire Motors Home"
         >
-          <BlackshireLogo size="xl" variant="horizontal" color="gold" />
+          <div className="block sm:hidden">
+            <BlackshireLogo size="sm" variant="horizontal" color="gold" />
+          </div>
+          <div className="hidden sm:block">
+            <BlackshireLogo size="xl" variant="horizontal" color="gold" />
+          </div>
         </a>
 
         {/* Desktop Navigation Links */}

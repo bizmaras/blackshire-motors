@@ -34,13 +34,16 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@BlackshireMotor" />
+    <meta name="twitter:creator" content="@BlackshireMotor" />
     <meta name="twitter:title" content="Blackshire Motors | Premier Luxury & Used Cars in New Castle, DE" />
     <meta name="twitter:description" content="Quality pre-owned vehicles, 0% Delaware sales tax, CARFAX certified inventory & on-site service center in New Castle, DE." />
     <meta name="twitter:image" content="https://blackshire-motors.vercel.app/logo-gold.png" />
 
-    <!-- Google Typography (Asynchronous Non-Blocking Load) -->
+    <!-- Google Typography & CDN Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://imagescdn.dealercarsearch.com" crossorigin>
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <noscript>
@@ -115,9 +118,9 @@
         },
         {
           "@type": "AutoRepair",
-          "@id": "https://www.blackshiremotors.com/#repair",
+          "@id": "https://blackshire-motors.vercel.app/#repair",
           "name": "Blackshire Motors Certified Auto Repair & Service Center",
-          "parentOrganization": { "@id": "https://www.blackshiremotors.com/#dealership" },
+          "parentOrganization": { "@id": "https://blackshire-motors.vercel.app/#dealership" },
           "telephone": "+1-302-276-2427",
           "address": {
             "@type": "PostalAddress",

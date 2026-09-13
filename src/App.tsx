@@ -135,7 +135,11 @@ function AppContent() {
             if (el) el.scrollIntoView({ behavior: 'smooth' });
           }}
           onOpenBespoke={() => setIsBespokeOpen(true)}
-          onFilterSearch={handleHeroSearch}
+          onSelectVehicleById={(vehicleId) => {
+            const v = VEHICLES_DATA.find((x) => x.id === vehicleId);
+            if (v) setSelectedVehicle(v);
+          }}
+          onQuickSearch={handleHeroSearch}
         />
 
         {/* Certified Inventory Showcase */}

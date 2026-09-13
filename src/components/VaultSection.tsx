@@ -97,8 +97,9 @@ export const VaultSection: React.FC<VaultSectionProps> = ({
         // Category tab filter
         const matchesCategory =
           selectedCategory === 'All' ||
-          vehicle.category === selectedCategory ||
-          (selectedCategory === 'Under $20k' && vehicle.price <= 20000);
+          (selectedCategory === 'Under $15k' && vehicle.price <= 15000) ||
+          (selectedCategory === 'Under $20k' && vehicle.price <= 20000) ||
+          vehicle.category === selectedCategory;
 
         // Make filter
         const matchesMake =

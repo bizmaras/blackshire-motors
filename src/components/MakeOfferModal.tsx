@@ -41,6 +41,7 @@ export const MakeOfferModal: React.FC<MakeOfferModalProps> = ({
   const [buyerNotes, setBuyerNotes] = useState('');
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [referenceId, setReferenceId] = useState('');
+  const [honeypot, setHoneypot] = useState('');
 
   useEffect(() => {
     if (vehicle) {
@@ -59,6 +60,7 @@ export const MakeOfferModal: React.FC<MakeOfferModalProps> = ({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (honeypot) return;
     playTactileChime();
     setHasSubmitted(true);
   };
@@ -165,11 +167,22 @@ export const MakeOfferModal: React.FC<MakeOfferModalProps> = ({
           ) : (
             /* Active Form State */
             <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Spam Honeypot Field */}
+              <div className="hidden" aria-hidden="true">
+                <input
+                  type="text"
+                  name="website_hp"
+                  tabIndex={-1}
+                  autoComplete="off"
+                  value={honeypot}
+                  onChange={(e) => setHoneypot(e.target.value)}
+                />
+              </div>
               
               {/* Vehicle Snapshot Card */}
               <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center gap-4">
                 <img
-                  src={vehicle.image}
+                  src={vehicle.heroImage || vehicle.gallery?.[0]}
                   alt={vehicle.name}
                   className="w-24 h-16 rounded-xl object-cover border border-white/10 shrink-0"
                 />
@@ -285,6 +298,7 @@ export const MakeOfferModal: React.FC<MakeOfferModalProps> = ({
                   <input
                     type="text"
                     required
+                    maxLength={100}
                     value={buyerName}
                     onChange={(e) => setBuyerName(e.target.value)}
                     placeholder="e.g. Michael Jordan"
@@ -299,6 +313,8 @@ export const MakeOfferModal: React.FC<MakeOfferModalProps> = ({
                   <input
                     type="tel"
                     required
+                    maxLength={25}
+                    pattern="[0-9+()-\s]+"
                     value={buyerPhone}
                     onChange={(e) => setBuyerPhone(e.target.value)}
                     placeholder="(302) 555-0199"
@@ -313,6 +329,7 @@ export const MakeOfferModal: React.FC<MakeOfferModalProps> = ({
                   <input
                     type="email"
                     required
+                    maxLength={100}
                     value={buyerEmail}
                     onChange={(e) => setBuyerEmail(e.target.value)}
                     placeholder="you@domain.com"
@@ -344,6 +361,7 @@ export const MakeOfferModal: React.FC<MakeOfferModalProps> = ({
                 </label>
                 <textarea
                   rows={2}
+                  maxLength={500}
                   value={buyerNotes}
                   onChange={(e) => setBuyerNotes(e.target.value)}
                   placeholder={lang === 'es' ? 'Ej. Viajo desde Pensilvania, quisiera cerrar trato hoy...' : 'e.g. Traveling from PA/NJ, ready to leave a deposit upon offer acceptance...'}

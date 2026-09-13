@@ -66,6 +66,7 @@ export interface Translations {
   };
   inventory: {
     lotStatus: string;
+    sortBy: string;
     sectionTitle: string;
     sectionSubtitle: string;
     delawareTaxCallout: string;
@@ -101,6 +102,7 @@ export interface Translations {
     calcTitle: string;
     instantComp: string;
     selectedPrice: string;
+    purchasePrice: string;
     estimatedSavings: string;
     comparedStates: string;
     claimSavingsBtn: string;
@@ -316,6 +318,7 @@ export const EN_TRANSLATIONS: Translations = {
   },
   inventory: {
     lotStatus: 'CURRENT LIVE LOT INVENTORY',
+    sortBy: 'Sort By:',
     sectionTitle: 'QUALITY PRE-OWNED CARS, SUVS & TRUCKS',
     sectionSubtitle: 'Explore our hand-checked used car inventory in New Castle, DE. Every vehicle includes free vehicle history, transparent pricing, and 0% Delaware sales tax.',
     delawareTaxCallout: 'Delaware 0% Sales Tax applied automatically on every vehicle.',
@@ -351,6 +354,7 @@ export const EN_TRANSLATIONS: Translations = {
     calcTitle: 'INTERACTIVE TAX SAVINGS CALCULATOR',
     instantComp: 'INSTANT STATE COMPARISON',
     selectedPrice: 'Vehicle Purchase Price:',
+    purchasePrice: 'Vehicle Purchase Price:',
     estimatedSavings: 'YOUR ESTIMATED CASH SAVINGS',
     comparedStates: 'vs. neighboring Pennsylvania (6%), New Jersey (6.625%), and Maryland (6%)',
     claimSavingsBtn: 'Claim 0% Tax Savings on Inventory',
@@ -566,6 +570,7 @@ export const ES_TRANSLATIONS: Translations = {
   },
   inventory: {
     lotStatus: 'INVENTARIO DISPONIBLE EN EL LOTE',
+    sortBy: 'Ordenar Por:',
     sectionTitle: 'AUTOS, SUVS Y CAMIONETAS USADAS DE CONFIANZA',
     sectionSubtitle: 'Explore nuestro inventario verificado en New Castle, DE. Cada auto incluye historial detallado, precios claros y 0% de impuesto de Delaware.',
     delawareTaxCallout: 'El 0% de impuesto de Delaware se aplica automáticamente a cada auto.',
@@ -601,6 +606,7 @@ export const ES_TRANSLATIONS: Translations = {
     calcTitle: 'CALCULADORA INTERACTIVA DE AHORRO FISCAL',
     instantComp: 'COMPARATIVA EN TIEMPO REAL',
     selectedPrice: 'Precio de Compra del Vehículo:',
+    purchasePrice: 'Precio de Compra del Vehículo:',
     estimatedSavings: 'SU AHORRO EN DINERO EN EFECTIVO',
     comparedStates: 'frente a Pensilvania (6%), Nueva Jersey (6.625%) y Maryland (6%)',
     claimSavingsBtn: 'Aprovechar Ahorro de Impuestos',

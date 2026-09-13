@@ -1,0 +1,20 @@
+# Blackshire Motors
+
+> Premier independent luxury and quality used car dealership located in New Castle, Delaware.
+
+Blackshire Motors offers quality pre-owned vehicles, 0% Delaware sales tax, certified CARFAX inspection reports, flexible auto financing, and on-site certified auto repair services.
+
+## Dealership Information
+- Dealer Name: Blackshire Motors
+- Location: 154 S Dupont Hwy, New Castle, DE 19720
+- Phone: (302) 276-2427
+- Sales Tax: 0% Delaware State Sales Tax
+- Hours: Monday – Saturday: 10:00 AM – 7:00 PM | Sunday: Closed
+
+## Key Sections & Links
+- [Vehicle Inventory](https://blackshire-motors.vercel.app/#inventory): Browse certified pre-owned cars, luxury sedans, trucks, and SUVs.
+- [Auto Financing](https://blackshire-motors.vercel.app/#financing): Prime credit and credit rebuilding auto loans with instant pre-qualification.
+- [Service & Repair](https://blackshire-motors.vercel.app/#service): Complete auto maintenance, mechanical repairs, brake service, and diagnostics.
+- [Customer Reviews](https://blackshire-motors.vercel.app/#reviews): Verified customer testimonials and 4.8-star ratings.
+- [Contact & Location](https://blackshire-motors.vercel.app/#contact): Showroom directions, interactive map, and online inquiry form.
+- [XML Sitemap](https://blackshire-motors.vercel.app/sitemap.xml): Full XML sitemap for search engines and AI agents.
